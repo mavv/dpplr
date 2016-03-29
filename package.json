@@ -1,0 +1,34 @@
+{
+  "name": "dpplr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.js",
+  "scripts": {
+    "build": "./node_modules/.bin/rollup -c rollup.config.js",
+    "html": "cp -iu ./src/index.html ./build/",
+    "server": "./node_modules/.bin/live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavv/dpplr.git"
+  },
+  "author": "mavu",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mavv/dpplr/issues"
+  },
+  "homepage": "https://github.com/mavv/dpplr#readme",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "rollup": "^0.25.7",
+    "rollup-plugin-babel": "^2.4.0"
+  },
+  "engines": {
+    "npm": ">=2.14.20",
+    "node": ">=4.4.0"
+  },
+  "os": [
+    "!win32"
+  ]
+}
