@@ -4,9 +4,12 @@
   "description": "",
   "main": "./src/main.js",
   "scripts": {
+    "start": "npm run html; npm run picture; npm run watch & npm run server",
+    "watch": "./node_modules/.bin/watch \"npm run build\" src/",
     "build": "./node_modules/.bin/rollup -c rollup.config.js",
-    "html": "cp -iu ./src/index.html ./build/",
-    "server": "./node_modules/.bin/live-server",
+    "html": "cp -u ./src/index.html ./build/",
+    "picture": "cp -iu ./src/star-with-transparent-bg.png ./build",
+    "server": "./node_modules/.bin/live-server --open=./build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +24,7 @@
   "homepage": "https://github.com/mavv/dpplr#readme",
   "devDependencies": {
     "babel-preset-es2015-rollup": "^1.1.1",
+    "nodemon": "^1.9.1",
     "rollup": "^0.25.7",
     "rollup-plugin-babel": "^2.4.0"
   },
